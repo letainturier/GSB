@@ -1,35 +1,45 @@
 <link href="css/css1.css" rel="stylesheet" type="text/css"/>
 <?php
 
+require_once 'config.php';
 
-$db = mysql_connect('localhost', 'root', ''); 
 
 
-mysql_select_db('gsb',$db);
+$pdo = new PDO("mysql:host=" . config::SERVERNAME . ";dbname=" . config::DBNAME, config::USER, config::PASSWORD);
+
 
 if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pass'])) {
   extract($_POST);
   
-  $sql = "select mdp, status from employe where login='".$login."'";
-  $req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+   
+    $req3 = $pdo->prepare("select mdp, status, poste from employe where login=:login1");
 
-  $data = mysql_fetch_assoc($req);
-
-  if($data['mdp'] != $pass) {
-    echo '<p>Mauvais login / password. Merci de recommencer</p>';
+    $req3->bindParam(':login1', $login);
+    $req3->execute();
+  
+ 
+    
+     $data = $req3->fetch();
+     
+     $mdp = $data['mdp'];
+     $poste = $data['poste'];
+     
+     //echo "$mdp <br>";
+     
+     
+  if($mdp != md5($pass) or $poste != 'Actif') {
+    echo '<p>Mauvais login / password ou compte désactivé.</p>';
     include('GSBIndex.php'); 
     exit;
   }
-  elseif($data['mdp'] == $pass and $data['status'] == 1 ) {
+  elseif($mdp == md5($pass) and $data['status'] == 1 ) {
     session_start();
     $_SESSION['login'] = $login;
     
-    header('Location: GSBIndexP.php');
-    
-    
+    header('Location: GSBIndexP.php');  
   } 
   
-  elseif($data['mdp'] == $pass and $data['status'] == 2 ) {
+  elseif($mdp == md5($pass) and $data['status'] == 2 ) {
     session_start();
     $_SESSION['login'] = $login;
     
@@ -38,13 +48,11 @@ if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pass'])) {
     
   } 
   
-  elseif($data['mdp'] == $pass and $data['status'] == 3 ) {
+  elseif($mdp == md5($pass) and $data['status'] == 3 ) {
     session_start();
     $_SESSION['login'] = $login;
-    
     header('Location: admin.php');
-    
-    
+
   }
 }  
 

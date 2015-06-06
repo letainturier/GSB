@@ -1,6 +1,7 @@
 <?php
 require_once 'config.php';
 
+
     if(isset($_GET['query'])) {
         // Mot tapé par l'utilisateur
         $q = htmlentities($_GET['query']);

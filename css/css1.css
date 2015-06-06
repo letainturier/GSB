@@ -2,8 +2,8 @@ html{
     background: #2A2A2A;
     font: 1.1em sans-serif;
 }
- 
- 
+
+
 ul{
     display: table;
     width: 900px;
@@ -16,12 +16,12 @@ ul{
     background:     -ms-linear-gradient(deepskyblue, dodgerblue);
     background:      -o-linear-gradient(deepskyblue, dodgerblue);
     background:         linear-gradient(deepskyblue, dodgerblue);
-     border-radius: 3px;
+    border-radius: 3px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
-                0 3px 5px rgba(0, 0, 0, .2),
-                0 5px 10px rgba(0, 0, 0, .2),
-                0 20px 20px rgba(0, 0, 0, .15);
-    
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+
 }
 ul li{
     display: table-cell;
@@ -35,15 +35,15 @@ ul li a{
     padding: 8px 8px 17px 8px;
     text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
     box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset, 
-                0 -1px 0 hsl(210, 100%, 32%) inset, 
-                0 -2px 0 hsl(210, 100%, 38%) inset, 
-                0 -3px 0 hsl(210, 100%, 44%) inset, 
-                0 -4px 0 hsl(210, 100%, 50%) inset, 
-                0 -5px 0 hsl(210, 100%, 60%) inset;
+        0 -1px 0 hsl(210, 100%, 32%) inset, 
+        0 -2px 0 hsl(210, 100%, 38%) inset, 
+        0 -3px 0 hsl(210, 100%, 44%) inset, 
+        0 -4px 0 hsl(210, 100%, 50%) inset, 
+        0 -5px 0 hsl(210, 100%, 60%) inset;
     transition: all .3s;
     transition: all .3s .1s;
     position: relative;
-    
+
 }
 
 ul li:first-child a{
@@ -57,11 +57,11 @@ ul li a:hover,
 ul li a:focus{
     background: rgba(255,255,255,.2);
     box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset, 
-                0 -1px 0 hsl(210, 100%, 42%) inset, 
-                0 -2px 0 hsl(210, 100%, 48%) inset, 
-                0 -3px 0 hsl(210, 100%, 54%) inset, 
-                0 -4px 0 hsl(210, 100%, 60%) inset, 
-                0 -5px 0 hsl(210, 100%, 70%) inset; 
+        0 -1px 0 hsl(210, 100%, 42%) inset, 
+        0 -2px 0 hsl(210, 100%, 48%) inset, 
+        0 -3px 0 hsl(210, 100%, 54%) inset, 
+        0 -4px 0 hsl(210, 100%, 60%) inset, 
+        0 -5px 0 hsl(210, 100%, 70%) inset; 
     padding: 8px 25px 17px 25px;
     transition: all .3s 0s;
 } 
@@ -87,15 +87,15 @@ ul li a:hover::before,
 ul li a:focus::before{
     background: white;
     box-shadow: 0 0 2px white, 
-                0 -1px 0 rgba(0, 0, 0, .4);
+        0 -1px 0 rgba(0, 0, 0, .4);
 }
 
 section{
-   
+
     width: 900px;
     height: 500px;
     opacity: 0.6;
-    background-color: #046380;
+    background-color: #375D81;
     margin: 0px auto;
     padding: 0;
 }
@@ -107,24 +107,54 @@ footer{
     padding: 0;
     background-color: dodgerblue;
     box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset, 
-                0 -1px 0 hsl(210, 100%, 32%) inset, 
-                0 -2px 0 hsl(210, 100%, 38%) inset, 
-                0 -3px 0 hsl(210, 100%, 44%) inset, 
-                0 -4px 0 hsl(210, 100%, 50%) inset, 
-                0 -5px 0 hsl(210, 100%, 60%) inset;
+        0 -1px 0 hsl(210, 100%, 32%) inset, 
+        0 -2px 0 hsl(210, 100%, 38%) inset, 
+        0 -3px 0 hsl(210, 100%, 44%) inset, 
+        0 -4px 0 hsl(210, 100%, 50%) inset, 
+        0 -5px 0 hsl(210, 100%, 60%) inset;
     border-radius: 0px 0px 10px 10px;
 }
 
 #suivie {
     position: absolute;
-    top: 440px;
+    top: 540px;
     right: 700px;
 }
 
 
 
+#Administration1 a h2{
+
+
+    width: 100px;
+    height: 40px;
+
+
+    background-color: dodgerblue;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset, 
+        0 -1px 0 hsl(210, 100%, 32%) inset, 
+        0 -2px 0 hsl(210, 100%, 38%) inset, 
+        0 -3px 0 hsl(210, 100%, 44%) inset, 
+        0 -4px 0 hsl(210, 100%, 50%) inset, 
+        0 -5px 0 hsl(210, 100%, 60%) inset;
+    border-radius: 10px 10px 10px 10px;
+}
+
+/*
+//article{
+    width:600px;
+    height:auto;
+    margin:auto ;
+    padding-bottom:30px;
+    background-color:#8EA2C6;
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+}*/
 
 
 
-    
- 
+
+
+
+
+
